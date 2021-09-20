@@ -22,6 +22,7 @@ type builder struct {
 	Spec                      spec.Spec
 	IncludeOptionalProperties bool
 	BuildIamPolicies          bool
+	Parameters                map[string]map[string]interface{}
 }
 
 var iam iamBuilder
