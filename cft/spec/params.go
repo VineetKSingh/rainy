@@ -175,7 +175,7 @@ func ResolveParams(paramName string) []string {
 	options := make([]string, 0)
 
 	for p := range Parameters {
-		if strings.HasSuffix(strings.ToLower(p), paramName) {
+		if strings.ToLower(p) == paramName {
 			options = append(options, p)
 		}
 	}

@@ -107,7 +107,7 @@ func (b cfnBuilder) Template(config map[string]string, params map[string]string)
 // includeOptionalProperties determines whether or not the generated template
 // will include optional properties. If it does, comments will be added to identify
 // which properties are optional
-func Template(config map[string]string, includeOptionalProperties bool) (cft.Template, error) {
+func Template(config map[string]string, includeOptionalProperties bool, parameters map[string]string) (cft.Template, error) {
 	b := newCfnBuilder(includeOptionalProperties, true)
-	return b.Template(config)
+	return b.Template(config, parameters)
 }
